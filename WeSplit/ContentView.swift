@@ -64,6 +64,7 @@ struct ContentView: View {
                 Section("Total Cost Before Split"){
                     Text(totalAmount, format: .currency(code:
                     Locale.current.currency?.identifier ?? "USD"))
+                    .foregroundStyle(tipPercentage == 0 ? .red : .black)
                 }
                 
                 Section("Amount Per Person"){
